@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>570421562971-1i60cjo1jiubcjv3bco7ppm0ckb45aji.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.570421562971-1i60cjo1jiubcjv3bco7ppm0ckb45aji</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCBjK8Lv9whIjSiGn1KulXUr-u4rQ2d6OE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>570421562971</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.eric.test.MiniSocial</string>
+	<key>PROJECT_ID</key>
+	<string>minisocial-22a4d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>minisocial-22a4d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:570421562971:ios:3ae0abf74ea7454bdef97e</string>
+</dict>
+</plist>

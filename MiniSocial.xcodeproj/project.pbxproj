@@ -9,24 +9,24 @@
 /* Begin PBXBuildFile section */
 		ACF881C52923A75A00C922A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF881C42923A75A00C922A8 /* AppDelegate.swift */; };
 		ACF881C72923A75A00C922A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF881C62923A75A00C922A8 /* SceneDelegate.swift */; };
-		ACF881C92923A75A00C922A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF881C82923A75A00C922A8 /* ViewController.swift */; };
-		ACF881CC2923A75A00C922A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF881CA2923A75A00C922A8 /* Main.storyboard */; };
 		ACF881CE2923A75E00C922A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF881CD2923A75E00C922A8 /* Assets.xcassets */; };
 		ACF881D12923A75E00C922A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF881CF2923A75E00C922A8 /* LaunchScreen.storyboard */; };
 		ACF881DC2923A75E00C922A8 /* MiniSocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF881DB2923A75E00C922A8 /* MiniSocialTests.swift */; };
-		ACF881E62923A75E00C922A8 /* MiniSocialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF881E52923A75E00C922A8 /* MiniSocialUITests.swift */; };
-		ACF881E82923A75E00C922A8 /* MiniSocialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF881E72923A75E00C922A8 /* MiniSocialUITestsLaunchTests.swift */; };
+		ACF881FE2923AB5900C922A8 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF881FC2923AB5900C922A8 /* AuthenticationViewController.swift */; };
+		ACF881FF2923AB5900C922A8 /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF881FD2923AB5900C922A8 /* AuthenticationViewController.xib */; };
+		ACF882022923AE3800C922A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACF882012923AE3800C922A8 /* GoogleService-Info.plist */; };
+		ACF882052923AF0400C922A8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ACF882042923AF0400C922A8 /* FirebaseAnalytics */; };
+		ACF882072923AF0400C922A8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ACF882062923AF0400C922A8 /* FirebaseAuth */; };
+		ACF8820A2923B0FC00C922A8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF882092923B0FC00C922A8 /* Utils.swift */; };
+		ACF8820C2923B13500C922A8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF8820B2923B13500C922A8 /* UIViewController+Ext.swift */; };
+		ACF8820E2923B22800C922A8 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF8820D2923B22800C922A8 /* LoadingViewController.swift */; };
+		ACF882112923B62E00C922A8 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF882102923B62E00C922A8 /* AuthenticationService.swift */; };
+		ACF88216292A698000C922A8 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF88214292A698000C922A8 /* TimelineViewController.swift */; };
+		ACF88217292A698000C922A8 /* TimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF88215292A698000C922A8 /* TimelineViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		ACF881D82923A75E00C922A8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ACF881B92923A75A00C922A8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ACF881C02923A75A00C922A8;
-			remoteInfo = MiniSocial;
-		};
-		ACF881E22923A75E00C922A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ACF881B92923A75A00C922A8 /* Project object */;
 			proxyType = 1;
@@ -39,16 +39,20 @@
 		ACF881C12923A75A00C922A8 /* MiniSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF881C42923A75A00C922A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF881C62923A75A00C922A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACF881C82923A75A00C922A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ACF881CB2923A75A00C922A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACF881CD2923A75E00C922A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACF881D02923A75E00C922A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACF881D22923A75E00C922A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACF881D72923A75E00C922A8 /* MiniSocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniSocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF881DB2923A75E00C922A8 /* MiniSocialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSocialTests.swift; sourceTree = "<group>"; };
-		ACF881E12923A75E00C922A8 /* MiniSocialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniSocialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACF881E52923A75E00C922A8 /* MiniSocialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSocialUITests.swift; sourceTree = "<group>"; };
-		ACF881E72923A75E00C922A8 /* MiniSocialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSocialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ACF881FC2923AB5900C922A8 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		ACF881FD2923AB5900C922A8 /* AuthenticationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationViewController.xib; sourceTree = "<group>"; };
+		ACF882012923AE3800C922A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ACF882092923B0FC00C922A8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		ACF8820B2923B13500C922A8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		ACF8820D2923B22800C922A8 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		ACF882102923B62E00C922A8 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		ACF88214292A698000C922A8 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		ACF88215292A698000C922A8 /* TimelineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,17 +60,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF882052923AF0400C922A8 /* FirebaseAnalytics in Frameworks */,
+				ACF882072923AF0400C922A8 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		ACF881D42923A75E00C922A8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ACF881DE2923A75E00C922A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,7 +80,6 @@
 			children = (
 				ACF881C32923A75A00C922A8 /* MiniSocial */,
 				ACF881DA2923A75E00C922A8 /* MiniSocialTests */,
-				ACF881E42923A75E00C922A8 /* MiniSocialUITests */,
 				ACF881C22923A75A00C922A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +89,6 @@
 			children = (
 				ACF881C12923A75A00C922A8 /* MiniSocial.app */,
 				ACF881D72923A75E00C922A8 /* MiniSocialTests.xctest */,
-				ACF881E12923A75E00C922A8 /* MiniSocialUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,13 +96,17 @@
 		ACF881C32923A75A00C922A8 /* MiniSocial */ = {
 			isa = PBXGroup;
 			children = (
+				ACF882082923B0ED00C922A8 /* Utils */,
+				ACF882002923AB6E00C922A8 /* Resource */,
+				ACF8820F2923B62000C922A8 /* Service */,
+				ACF882122923B66E00C922A8 /* Models */,
+				ACF881F42923A7D400C922A8 /* View */,
 				ACF881C42923A75A00C922A8 /* AppDelegate.swift */,
 				ACF881C62923A75A00C922A8 /* SceneDelegate.swift */,
-				ACF881C82923A75A00C922A8 /* ViewController.swift */,
-				ACF881CA2923A75A00C922A8 /* Main.storyboard */,
 				ACF881CD2923A75E00C922A8 /* Assets.xcassets */,
 				ACF881CF2923A75E00C922A8 /* LaunchScreen.storyboard */,
 				ACF881D22923A75E00C922A8 /* Info.plist */,
+				ACF882012923AE3800C922A8 /* GoogleService-Info.plist */,
 			);
 			path = MiniSocial;
 			sourceTree = "<group>";
@@ -118,13 +119,63 @@
 			path = MiniSocialTests;
 			sourceTree = "<group>";
 		};
-		ACF881E42923A75E00C922A8 /* MiniSocialUITests */ = {
+		ACF881F42923A7D400C922A8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ACF881E52923A75E00C922A8 /* MiniSocialUITests.swift */,
-				ACF881E72923A75E00C922A8 /* MiniSocialUITestsLaunchTests.swift */,
+				ACF88213292A696E00C922A8 /* Timeline */,
+				ACF881FB2923AB2B00C922A8 /* Authentication */,
 			);
-			path = MiniSocialUITests;
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACF881FB2923AB2B00C922A8 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				ACF881FC2923AB5900C922A8 /* AuthenticationViewController.swift */,
+				ACF881FD2923AB5900C922A8 /* AuthenticationViewController.xib */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		ACF882002923AB6E00C922A8 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		ACF882082923B0ED00C922A8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ACF882092923B0FC00C922A8 /* Utils.swift */,
+				ACF8820B2923B13500C922A8 /* UIViewController+Ext.swift */,
+				ACF8820D2923B22800C922A8 /* LoadingViewController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ACF8820F2923B62000C922A8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ACF882102923B62E00C922A8 /* AuthenticationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		ACF882122923B66E00C922A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ACF88213292A696E00C922A8 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				ACF88214292A698000C922A8 /* TimelineViewController.swift */,
+				ACF88215292A698000C922A8 /* TimelineViewController.xib */,
+			);
+			path = Timeline;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +194,10 @@
 			dependencies = (
 			);
 			name = MiniSocial;
+			packageProductDependencies = (
+				ACF882042923AF0400C922A8 /* FirebaseAnalytics */,
+				ACF882062923AF0400C922A8 /* FirebaseAuth */,
+			);
 			productName = MiniSocial;
 			productReference = ACF881C12923A75A00C922A8 /* MiniSocial.app */;
 			productType = "com.apple.product-type.application";
@@ -165,24 +220,6 @@
 			productReference = ACF881D72923A75E00C922A8 /* MiniSocialTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ACF881E02923A75E00C922A8 /* MiniSocialUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ACF881F12923A75E00C922A8 /* Build configuration list for PBXNativeTarget "MiniSocialUITests" */;
-			buildPhases = (
-				ACF881DD2923A75E00C922A8 /* Sources */,
-				ACF881DE2923A75E00C922A8 /* Frameworks */,
-				ACF881DF2923A75E00C922A8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ACF881E32923A75E00C922A8 /* PBXTargetDependency */,
-			);
-			name = MiniSocialUITests;
-			productName = MiniSocialUITests;
-			productReference = ACF881E12923A75E00C922A8 /* MiniSocialUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +237,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = ACF881C02923A75A00C922A8;
 					};
-					ACF881E02923A75E00C922A8 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = ACF881C02923A75A00C922A8;
-					};
 				};
 			};
 			buildConfigurationList = ACF881BC2923A75A00C922A8 /* Build configuration list for PBXProject "MiniSocial" */;
@@ -215,13 +248,15 @@
 				Base,
 			);
 			mainGroup = ACF881B82923A75A00C922A8;
+			packageReferences = (
+				ACF882032923AF0400C922A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = ACF881C22923A75A00C922A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				ACF881C02923A75A00C922A8 /* MiniSocial */,
 				ACF881D62923A75E00C922A8 /* MiniSocialTests */,
-				ACF881E02923A75E00C922A8 /* MiniSocialUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,20 +266,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF881FF2923AB5900C922A8 /* AuthenticationViewController.xib in Resources */,
+				ACF882022923AE3800C922A8 /* GoogleService-Info.plist in Resources */,
+				ACF88217292A698000C922A8 /* TimelineViewController.xib in Resources */,
 				ACF881D12923A75E00C922A8 /* LaunchScreen.storyboard in Resources */,
 				ACF881CE2923A75E00C922A8 /* Assets.xcassets in Resources */,
-				ACF881CC2923A75A00C922A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		ACF881D52923A75E00C922A8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ACF881DF2923A75E00C922A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,9 +288,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACF881C92923A75A00C922A8 /* ViewController.swift in Sources */,
 				ACF881C52923A75A00C922A8 /* AppDelegate.swift in Sources */,
+				ACF881FE2923AB5900C922A8 /* AuthenticationViewController.swift in Sources */,
+				ACF8820C2923B13500C922A8 /* UIViewController+Ext.swift in Sources */,
 				ACF881C72923A75A00C922A8 /* SceneDelegate.swift in Sources */,
+				ACF8820A2923B0FC00C922A8 /* Utils.swift in Sources */,
+				ACF88216292A698000C922A8 /* TimelineViewController.swift in Sources */,
+				ACF8820E2923B22800C922A8 /* LoadingViewController.swift in Sources */,
+				ACF882112923B62E00C922A8 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,15 +307,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACF881DD2923A75E00C922A8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ACF881E82923A75E00C922A8 /* MiniSocialUITestsLaunchTests.swift in Sources */,
-				ACF881E62923A75E00C922A8 /* MiniSocialUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,22 +315,9 @@
 			target = ACF881C02923A75A00C922A8 /* MiniSocial */;
 			targetProxy = ACF881D82923A75E00C922A8 /* PBXContainerItemProxy */;
 		};
-		ACF881E32923A75E00C922A8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ACF881C02923A75A00C922A8 /* MiniSocial */;
-			targetProxy = ACF881E22923A75E00C922A8 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ACF881CA2923A75A00C922A8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACF881CB2923A75A00C922A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ACF881CF2923A75E00C922A8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,9 +454,9 @@
 				INFOPLIST_FILE = MiniSocial/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,9 +481,9 @@
 				INFOPLIST_FILE = MiniSocial/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,40 +535,6 @@
 			};
 			name = Release;
 		};
-		ACF881F22923A75E00C922A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eric.test.MiniSocialUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MiniSocial;
-			};
-			name = Debug;
-		};
-		ACF881F32923A75E00C922A8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eric.test.MiniSocialUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MiniSocial;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -586,16 +565,31 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ACF881F12923A75E00C922A8 /* Build configuration list for PBXNativeTarget "MiniSocialUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ACF881F22923A75E00C922A8 /* Debug */,
-				ACF881F32923A75E00C922A8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACF882032923AF0400C922A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACF882042923AF0400C922A8 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACF882032923AF0400C922A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		ACF882062923AF0400C922A8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACF882032923AF0400C922A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACF881B92923A75A00C922A8 /* Project object */;
 }
