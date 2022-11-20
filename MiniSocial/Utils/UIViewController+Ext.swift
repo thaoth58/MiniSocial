@@ -10,6 +10,8 @@ import UIKit
 
 
 extension UIViewController {
+    static private var _loadingView: LoadingView?
+
     func showErrorAlert(message: String) {
         let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "OK", style: .cancel)
@@ -18,17 +20,20 @@ extension UIViewController {
     }
 
     func showLoading() {
-        let loadingVC = LoadingViewController()
+        hideLoading()
 
-        loadingVC.modalPresentationStyle = .overCurrentContext
-        loadingVC.modalTransitionStyle = .crossDissolve
+        guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+              let window = sceneDelegate.window else { return }
 
-        present(loadingVC, animated: true)
+        if Self._loadingView == nil {
+            Self._loadingView = LoadingView(frame: window.bounds)
+        }
+        window.addSubview(Self._loadingView!)
     }
 
-    func hideLoading(completion: (() -> Void)? = nil) {
-        guard let loadingVC = presentedViewController as? LoadingViewController else { return }
-        loadingVC.dismiss(animated: true, completion: completion)
+    func hideLoading() {
+        Self._loadingView?.removeFromSuperview()
+        Self._loadingView = nil
     }
 
     func setAppRootViewController(_ viewController: UIViewController, useNavigationController: Bool = true) {

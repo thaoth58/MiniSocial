@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoadingViewController: UIViewController {
+class LoadingView: UIView {
     private lazy var _activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView()
 
@@ -40,15 +40,23 @@ class LoadingViewController: UIViewController {
     }()
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
 
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupView()
+    }
 
-        _blurEffectView.frame = view.bounds
-        view.addSubview(_blurEffectView)
+    private func setupView() {
+        backgroundColor = UIColor.black.withAlphaComponent(0.5)
 
-        _activityIndicator.center = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
-        view.addSubview(_activityIndicator)
+        _blurEffectView.frame = bounds
+        addSubview(_blurEffectView)
+
+        _activityIndicator.center = CGPoint(x: bounds.midX, y: bounds.midY)
+        addSubview(_activityIndicator)
     }
 }

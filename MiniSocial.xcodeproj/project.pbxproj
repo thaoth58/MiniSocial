@@ -19,10 +19,11 @@
 		ACF882072923AF0400C922A8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ACF882062923AF0400C922A8 /* FirebaseAuth */; };
 		ACF8820A2923B0FC00C922A8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF882092923B0FC00C922A8 /* Utils.swift */; };
 		ACF8820C2923B13500C922A8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF8820B2923B13500C922A8 /* UIViewController+Ext.swift */; };
-		ACF8820E2923B22800C922A8 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF8820D2923B22800C922A8 /* LoadingViewController.swift */; };
+		ACF8820E2923B22800C922A8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF8820D2923B22800C922A8 /* LoadingView.swift */; };
 		ACF882112923B62E00C922A8 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF882102923B62E00C922A8 /* AuthenticationService.swift */; };
 		ACF88216292A698000C922A8 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF88214292A698000C922A8 /* TimelineViewController.swift */; };
 		ACF88217292A698000C922A8 /* TimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF88215292A698000C922A8 /* TimelineViewController.xib */; };
+		ACF88219292A6F0F00C922A8 /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF88218292A6F0F00C922A8 /* UserDefaults+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +50,11 @@
 		ACF882012923AE3800C922A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACF882092923B0FC00C922A8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		ACF8820B2923B13500C922A8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
-		ACF8820D2923B22800C922A8 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		ACF8820D2923B22800C922A8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		ACF882102923B62E00C922A8 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		ACF88214292A698000C922A8 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		ACF88215292A698000C922A8 /* TimelineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineViewController.xib; sourceTree = "<group>"; };
+		ACF88218292A6F0F00C922A8 /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +151,8 @@
 			children = (
 				ACF882092923B0FC00C922A8 /* Utils.swift */,
 				ACF8820B2923B13500C922A8 /* UIViewController+Ext.swift */,
-				ACF8820D2923B22800C922A8 /* LoadingViewController.swift */,
+				ACF8820D2923B22800C922A8 /* LoadingView.swift */,
+				ACF88218292A6F0F00C922A8 /* UserDefaults+Ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -293,8 +296,9 @@
 				ACF8820C2923B13500C922A8 /* UIViewController+Ext.swift in Sources */,
 				ACF881C72923A75A00C922A8 /* SceneDelegate.swift in Sources */,
 				ACF8820A2923B0FC00C922A8 /* Utils.swift in Sources */,
+				ACF88219292A6F0F00C922A8 /* UserDefaults+Ext.swift in Sources */,
 				ACF88216292A698000C922A8 /* TimelineViewController.swift in Sources */,
-				ACF8820E2923B22800C922A8 /* LoadingViewController.swift in Sources */,
+				ACF8820E2923B22800C922A8 /* LoadingView.swift in Sources */,
 				ACF882112923B62E00C922A8 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

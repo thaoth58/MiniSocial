@@ -34,14 +34,14 @@ class AuthenticationViewController: UIViewController {
             [weak self] authResult, error in
 
             DispatchQueue.main.async {
-                self?.hideLoading(completion: {
-                    if let error = error {
-                        self?.showErrorAlert(message: error.localizedDescription)
-                    } else if let authResult = authResult {
-                        let timelineVC = TimelineViewController()
-                        self?.setAppRootViewController(timelineVC)
-                    }
-                })
+                self?.hideLoading()
+
+                if let error = error {
+                    self?.showErrorAlert(message: error.localizedDescription)
+                } else if let authResult = authResult {
+                    let timelineVC = TimelineViewController()
+                    self?.setAppRootViewController(timelineVC)
+                }
             }
         }
     }
