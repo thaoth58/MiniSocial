@@ -12,11 +12,19 @@ import UIKit
 extension UIViewController {
     static private var _loadingView: LoadingView?
 
-    func showErrorAlert(message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+    func showAlert(title: String? = nil, message: String, okTitle: String? = nil, okHandler: ((UIAlertAction) -> Void)? = nil, cancelTitle: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if let okTitle = okTitle {
+            let okAction = UIAlertAction(title: okTitle, style: .default, handler: okHandler)
+            alertController.addAction(okAction)
+        }
+        let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel)
         alertController.addAction(cancelAction)
         present(alertController, animated: true)
+    }
+
+    func showErrorAlert(message: String) {
+        showAlert(title: "Error", message: message, cancelTitle: "OK")
     }
 
     func showLoading() {
@@ -28,7 +36,10 @@ extension UIViewController {
         if Self._loadingView == nil {
             Self._loadingView = LoadingView(frame: window.bounds)
         }
-        window.addSubview(Self._loadingView!)
+
+        if let loadingView = Self._loadingView {
+            window.addSubview(loadingView)
+        }
     }
 
     func hideLoading() {

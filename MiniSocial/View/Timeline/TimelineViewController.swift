@@ -10,6 +10,8 @@ import UIKit
 class TimelineViewController: UIViewController {
     private enum Constant {
         static let title = "Timeline"
+        static let signOut = "Sign Out"
+        static let signOutConfirm = "Do you want to sign out?"
     }
 
     @IBOutlet private weak var _tableView: UITableView!
@@ -22,6 +24,30 @@ class TimelineViewController: UIViewController {
 
     private func setupUI() {
         title = Constant.title
+
+        // Navigation bar buttons
+        let signOutButton = UIBarButtonItem(title: Constant.signOut, style: .plain, target: self, action: #selector(didTapSignOutButton))
+        navigationItem.leftBarButtonItem = signOutButton
+
+        let createButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapCreateButton))
+        navigationItem.rightBarButtonItem = createButton
+    }
+
+    @objc private func didTapCreateButton() {
+        print("Hello")
+    }
+
+    @objc private func didTapSignOutButton() {
+        showAlert(message: Constant.signOutConfirm, okTitle: "Yes", okHandler: {
+            [weak self] _ in
+
+            self?.showAuthentication()
+        }, cancelTitle: "No")
+    }
+
+    private func showAuthentication() {
+        let authenticationVC = AuthenticationViewController()
+        setAppRootViewController(authenticationVC, useNavigationController: false)
     }
 }
 
