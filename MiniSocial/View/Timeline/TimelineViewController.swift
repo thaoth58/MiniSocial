@@ -15,11 +15,15 @@ class TimelineViewController: UIViewController {
     }
 
     @IBOutlet private weak var _tableView: UITableView!
-    
+    private var _posts: [Post] = []
+    private lazy var _postService = PostService()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+
+        fetchPosts()
     }
 
     private func setupUI() {
@@ -31,18 +35,53 @@ class TimelineViewController: UIViewController {
 
         let createButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapCreateButton))
         navigationItem.rightBarButtonItem = createButton
+
+        // Table view
+        _tableView.register(UINib(nibName: PostCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: PostCell.reuseIdentifier)
     }
 
     @objc private func didTapCreateButton() {
-        print("Hello")
+        let newPostVC = NewPostViewController()
+        newPostVC.didCreatePost = {
+            [weak self] post in
+            self?._posts.append(post)
+            self?._tableView.reloadData()
+        }
+
+        let navigationController = UINavigationController(rootViewController: newPostVC)
+
+        present(navigationController, animated: true)
     }
 
     @objc private func didTapSignOutButton() {
         showAlert(message: Constant.signOutConfirm, okTitle: "Yes", okHandler: {
             [weak self] _ in
 
+            AuthenticationService.shared.signOut()
             self?.showAuthentication()
         }, cancelTitle: "No")
+    }
+
+    private func fetchPosts() {
+        showLoading()
+
+        DispatchQueue.global().async {
+            self._postService.fetchPost {
+                [weak self] result in
+
+                DispatchQueue.main.async {
+                    self?.hideLoading()
+
+                    switch result {
+                        case .success(let posts):
+                            self?._posts = posts
+                            self?._tableView.reloadData()
+                        case .failure(let error):
+                            print("Fetch post error: \(error)")
+                    }
+                }
+            }
+        }
     }
 
     private func showAuthentication() {
@@ -57,12 +96,54 @@ extension TimelineViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return _posts.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = "Hello"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PostCell.reuseIdentifier) as? PostCell else {
+            return UITableViewCell()
+        }
+        let post = _posts[indexPath.row]
+        cell.bindData(post: post)
+        cell.willDeletePost = {
+            [weak self] in
+
+            self?.showLoading()
+
+            DispatchQueue.global().async {
+                self?._postService.deletePost(postId: post.postId) {
+                    result in
+
+                    DispatchQueue.main.async {
+                        self?.hideLoading()
+
+                        switch result {
+                            case .success(_):
+                                self?._posts.remove(at: indexPath.row)
+                                self?._tableView.reloadData()
+                            case .failure(let error):
+                                print("Fetch post error: \(error)")
+                        }
+                    }
+                }
+            }
+        }
+
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return PostCell.height
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = _posts[indexPath.row]
+
+        let postDetailVC = PostDetailViewController()
+        postDetailVC.post = post
+
+        let navigationController = UINavigationController(rootViewController: postDetailVC)
+
+        present(navigationController, animated: true)
     }
 }

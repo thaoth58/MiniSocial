@@ -39,6 +39,7 @@ class AuthenticationViewController: UIViewController {
                 if let error = error {
                     self?.showErrorAlert(message: error.localizedDescription)
                 } else if let authResult = authResult {
+                    UserDefaultsManager.userId = authResult.user.uid
                     let timelineVC = TimelineViewController()
                     self?.setAppRootViewController(timelineVC)
                 }

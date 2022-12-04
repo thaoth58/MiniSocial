@@ -26,4 +26,9 @@ class AuthenticationService {
             Auth.auth().createUser(withEmail: email, password: password, completion: completion)
         }
     }
+
+    func signOut() {
+        try? Auth.auth().signOut()
+        UserDefaultsManager.userId = nil
+    }
 }

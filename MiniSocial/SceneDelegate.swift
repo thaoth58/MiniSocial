@@ -19,7 +19,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = AuthenticationViewController()
+
+        if UserDefaultsManager.isLoggedIn {
+            let timelineVC = TimelineViewController()
+            let navigationController = UINavigationController(rootViewController: timelineVC)
+            window?.rootViewController = navigationController
+        } else {
+            window?.rootViewController = AuthenticationViewController()
+        }
         window?.makeKeyAndVisible()
     }
 
