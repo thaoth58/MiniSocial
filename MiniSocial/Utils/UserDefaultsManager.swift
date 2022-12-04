@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class UserDefaultsManager {
     private static let uidKey = "UID"
 

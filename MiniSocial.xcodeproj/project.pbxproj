@@ -13,6 +13,10 @@
 		AC75045E293C58E6008D9341 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AC75045D293C58E6008D9341 /* Kingfisher */; };
 		AC750463293C635C008D9341 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC750461293C635C008D9341 /* PostDetailViewController.swift */; };
 		AC750464293C635C008D9341 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC750462293C635C008D9341 /* PostDetailViewController.xib */; };
+		AC75046A293C6781008D9341 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC750469293C6781008D9341 /* FirebaseManager.swift */; };
+		AC750471293C715D008D9341 /* PostServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC750470293C715D008D9341 /* PostServiceTest.swift */; };
+		AC750474293C7193008D9341 /* MockFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC750473293C7193008D9341 /* MockFirebaseManager.swift */; };
+		AC750477293CA7A2008D9341 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC750476293CA7A2008D9341 /* TestData.swift */; };
 		ACF881C52923A75A00C922A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF881C42923A75A00C922A8 /* AppDelegate.swift */; };
 		ACF881C72923A75A00C922A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF881C62923A75A00C922A8 /* SceneDelegate.swift */; };
 		ACF881CE2923A75E00C922A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF881CD2923A75E00C922A8 /* Assets.xcassets */; };
@@ -52,6 +56,10 @@
 		AC750459293C5741008D9341 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		AC750461293C635C008D9341 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		AC750462293C635C008D9341 /* PostDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
+		AC750469293C6781008D9341 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		AC750470293C715D008D9341 /* PostServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServiceTest.swift; sourceTree = "<group>"; };
+		AC750473293C7193008D9341 /* MockFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFirebaseManager.swift; sourceTree = "<group>"; };
+		AC750476293CA7A2008D9341 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		ACF881C12923A75A00C922A8 /* MiniSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF881C42923A75A00C922A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF881C62923A75A00C922A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +132,31 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		AC750468293C6776008D9341 /* FirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				AC750469293C6781008D9341 /* FirebaseManager.swift */,
+			);
+			path = FirebaseManager;
+			sourceTree = "<group>";
+		};
+		AC750472293C7189008D9341 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				AC750475293CA798008D9341 /* TestData */,
+				AC750473293C7193008D9341 /* MockFirebaseManager.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		AC750475293CA798008D9341 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				AC750476293CA7A2008D9341 /* TestData.swift */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
 		ACF881B82923A75A00C922A8 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +178,7 @@
 		ACF881C32923A75A00C922A8 /* MiniSocial */ = {
 			isa = PBXGroup;
 			children = (
+				AC750468293C6776008D9341 /* FirebaseManager */,
 				ACF882082923B0ED00C922A8 /* Utils */,
 				ACF8820F2923B62000C922A8 /* Service */,
 				ACF882122923B66E00C922A8 /* Models */,
@@ -162,6 +196,8 @@
 		ACF881DA2923A75E00C922A8 /* MiniSocialTests */ = {
 			isa = PBXGroup;
 			children = (
+				AC750472293C7189008D9341 /* Mock */,
+				AC750470293C715D008D9341 /* PostServiceTest.swift */,
 			);
 			path = MiniSocialTests;
 			sourceTree = "<group>";
@@ -292,6 +328,7 @@
 					};
 					ACF881D62923A75E00C922A8 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 						TestTargetID = ACF881C02923A75A00C922A8;
 					};
 				};
@@ -361,6 +398,7 @@
 				ACF88219292A6F0F00C922A8 /* UserDefaultsManager.swift in Sources */,
 				ACF88216292A698000C922A8 /* TimelineViewController.swift in Sources */,
 				ACF8820E2923B22800C922A8 /* LoadingView.swift in Sources */,
+				AC75046A293C6781008D9341 /* FirebaseManager.swift in Sources */,
 				ACF882112923B62E00C922A8 /* AuthenticationService.swift in Sources */,
 				ACF8821D292DEA1400C922A8 /* NewPostViewController.swift in Sources */,
 			);
@@ -370,6 +408,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC750477293CA7A2008D9341 /* TestData.swift in Sources */,
+				AC750474293C7193008D9341 /* MockFirebaseManager.swift in Sources */,
+				AC750471293C715D008D9341 /* PostServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,14 +609,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eric.test.MiniSocialTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniSocial.app/MiniSocial";
@@ -587,10 +635,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eric.test.MiniSocialTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

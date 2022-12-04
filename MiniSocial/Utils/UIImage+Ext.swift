@@ -18,6 +18,7 @@ extension UIImage {
 
         while needCompress && compressingValue > 0 {
             if let data = jpegData(compressionQuality: compressingValue) {
+                print(data.count)
                 if data.count < sizeInBytes {
                     needCompress = false
                     imgData = data
